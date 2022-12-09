@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+header {
+  color: #2348ec;
+}
+header nav {
+  padding: 10px;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-weight: 700;
+  background-color: red;
+}
+header nav ul li a > [aria-hidden=true] {
+  display: none;
+}
+
+.header__logo {
+  width: 90px;
+  aspect-ratio: 1;
+  border-radius: 5%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+@media screen and (max-width: 600px) {
+  header nav {
+    justify-content: flex-start;
+    background-color: hsla(0deg, 0%, 100%, 0.1);
+    backdrop-filter: blur(1rem);
+    inset: 0 0 0 30%;
+  }
+  header nav ul {
+    flex-direction: column;
+    justify-content: center;
+    padding: min(30vh, 2rem) 2rem;
+  }
+  header nav ul li a > [aria-hidden=true] {
+    display: inline-block;
+    margin-inline-end: 0.75rem;
+  }
+}
+.carousel__img {
+  width: 100vw;
+  height: 80vh;
+}
+
+.nav__btn {
+  transition: all 1s ease-in-out;
+}
+.nav__btn:hover {
+  color: red;
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,53 @@
+@use "./variables" as *;
+header {
+  color: $color-one;
+  nav {
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-weight: 700;
+    background-color: red;
+    ul {
+      & li {
+        a > [aria-hidden="true"] {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.header__logo {
+  width: 90px;
+  aspect-ratio: 1;
+  border-radius: 5%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    nav {
+      justify-content: flex-start;
+      background-color: hsl(0 0% 100% / 0.1);
+      backdrop-filter: blur(1rem);
+      inset: 0 0 0 30%;
+      ul {
+        flex-direction: column;
+        justify-content: center;
+        padding: min(30vh, 2rem) 2rem;
+        & li {
+          a > [aria-hidden="true"] {
+            display: inline-block;
+            margin-inline-end: 0.75rem;
+          }
+        }
+      }
+    }
+  }
+}
