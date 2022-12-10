@@ -7,12 +7,15 @@ const carouselDots = document.querySelector("#carousel-dots");
 let currentIndex = 0;
 
 const updateCurrent = (currentIndex) => {
-  console.log(currentIndex);
+  // console.log(currentIndex);
   const activeDot = carouselDots.querySelector("[data-active]");
-  // console.log(activeDot)
+  // console.log(activeDot);
+  // console.log(currentIndex);
   const activeSlide = slides.querySelector("[data-active]");
+
   delete activeSlide.dataset.active;
   delete activeDot.dataset.active;
+
   carouselDots.children[currentIndex].dataset.active = true;
   slides.children[currentIndex].dataset.active = true;
 };
@@ -25,8 +28,9 @@ for (let i = 0; i < slideLength; i++) {
     carouselDots.children[i].dataset.active = true;
   }
   slideDot.addEventListener("click", () => {
-    currentIndex = i;
-    updateCurrent(currentIndex);
+    const dotIndex = i;
+    console.log(dotIndex);
+    updateCurrent(dotIndex);
   });
 }
 
@@ -35,7 +39,6 @@ buttons.forEach((button) => {
     const offset = button.dataset.carouselButton === "next" ? 1 : -1;
     activeSlide = slides.querySelector("[data-active]");
     currentIndex = [...slides.children].indexOf(activeSlide) + offset;
-
     if (currentIndex < 0) currentIndex = slides.children.length - 1;
     if (currentIndex >= slides.children.length) currentIndex = 0;
     updateCurrent(currentIndex);
@@ -44,10 +47,17 @@ buttons.forEach((button) => {
 
 const autoSlide = () => {
   setInterval(() => {
+    // step 1:lookfor current active index
+    activeSlide = slides.querySelector("[data-active]");
+    currentIndex = [...slides.children].indexOf(activeSlide);
+
+    // console.log(currentIndex);
+
     currentIndex++;
     if (currentIndex >= slides.children.length) currentIndex = 0;
+    // step 2:update current active index
     updateCurrent(currentIndex);
-  }, 1000);
+  }, 2000);
 };
 
 // autoSlide();

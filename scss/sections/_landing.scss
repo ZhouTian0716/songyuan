@@ -67,9 +67,6 @@
   height: 5px;
   background: grey;
   cursor: pointer;
-  &:hover {
-    background: yellow;
-  }
   &[data-active] {
     background: yellow;
   }

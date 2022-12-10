@@ -166,9 +166,6 @@ header nav ul li a > [aria-hidden=true] {
   background: grey;
   cursor: pointer;
 }
-.carousel-dot:hover {
-  background: yellow;
-}
 .carousel-dot[data-active] {
   background: yellow;
 }
