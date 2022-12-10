@@ -12,6 +12,7 @@
       crossorigin="anonymous"
     ></script>
     <script defer src="./dist/js/main.js"></script>
+    <script defer src="./dist/js/carousel.js"></script>
   </head>
   <body>
     <header>
@@ -23,52 +24,70 @@
       <nav data-visible="false" id="primary-navigation">
         <ul class="flex">
           <li>
-            <a href="#" class="nav__btn"
+            <a href="#home" class="nav__btn"
               ><span aria-hidden="true">1.</span>Home</a
             >
           </li>
           <li>
-            <a href="#" class="nav__btn"
+            <a href="#About" class="nav__btn"
               ><span aria-hidden="true">2.</span>About Us</a
             >
           </li>
           <li>
-            <a href="#" class="nav__btn"
+            <a href="#Gallery" class="nav__btn"
               ><span aria-hidden="true">3.</span>Gallery</a
             >
           </li>
           <li>
-            <a href="#" class="nav__btn"
+            <a href="#News" class="nav__btn"
               ><span aria-hidden="true">4.</span>News</a
             >
           </li>
           <li>
-            <a href="#" class="nav__btn"
+            <a href="#Location" class="nav__btn"
               ><span aria-hidden="true">5.</span>Location</a
             >
           </li>
           <li>
-            <a href="#" class="nav__btn"
+            <a href="#Contact" class="nav__btn"
               ><span aria-hidden="true">6.</span>Contact</a
             >
           </li>
         </ul>
       </nav>
     </header>
-    <section>
-      <div class="container">
-        <img src="./dist/assets/img/1.jpg" alt="home" class="carousel__img" />
+    
+    <section class="landing">
+      <div class="carousel" data-carousel>
+        <button class="carousel-btn prev" data-carousel-button="prev">
+          &#8656;
+        </button>
+        <button class="carousel-btn next" data-carousel-button="next">
+          &#8658;
+        </button>
+        <ul id="slides">
+          <li class="slide" data-active>
+            <img src="./dist/assets/img/1.jpg" alt="1" />
+          </li>
+          <li class="slide">
+            <img src="./dist/assets/img/2.jpg" alt="2" />
+          </li>
+          <li class="slide">
+            <img src="./dist/assets/img/3.jpg" alt="3" />
+          </li>
+          <li class="slide">
+            <img src="./dist/assets/img/4.jpg" alt="4" />
+          </li>
+          <li class="slide">
+            <img src="./dist/assets/img/5.jpg" alt="5" />
+          </li>
+          <li class="slide">
+            <img src="./dist/assets/img/6.jpg" alt="6" />
+          </li>
+        </ul>
       </div>
-    </section>
-    <section>
-      <p>
-        <img
-          src="./dist/assets/img/2.jpg"
-          alt="home"
-          style="width: 200px"
-        />Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
-        laboriosam!
-      </p>
+      <!-- javascript inject dots -->
+      <div class="flex" id="carousel-dots"></div>
     </section>
   </body>
 </html>
