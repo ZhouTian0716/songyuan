@@ -155,7 +155,7 @@ header nav ul li a > [aria-hidden=true] {
   position: absolute;
   right: 1rem;
   bottom: 1rem;
-  --gap: 5px;
+  --gap: 10px;
   z-index: 2;
 }
 
@@ -167,7 +167,8 @@ header nav ul li a > [aria-hidden=true] {
   cursor: pointer;
 }
 .carousel-dot[data-active] {
-  background: yellow;
+  background: rgb(241, 241, 13);
+  transform: scale(1.5);
 }
 
 .nav__btn {

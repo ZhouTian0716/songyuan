@@ -1,3 +1,4 @@
+@use "../sections/variables" as *;
 .landing {
   position: relative;
 }
@@ -57,7 +58,7 @@
   position: absolute;
   right: 1rem;
   bottom: 1rem;
-  --gap: 5px;
+  --gap: 10px;
   z-index: 2;
 }
 
@@ -68,7 +69,8 @@
   background: grey;
   cursor: pointer;
   &[data-active] {
-    background: yellow;
+    background: $color-five;
+    transform: scale(1.5);
   }
 }
 
