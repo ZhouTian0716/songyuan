@@ -6,13 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SongYuan Kinder</title>
     <link rel="stylesheet" href="./dist/css/style.css" />
+    <script
+      defer
+      src="https://kit.fontawesome.com/f422f6c85c.js"
+      crossorigin="anonymous"
+    ></script>
     <script defer src="./dist/js/main.js"></script>
   </head>
   <body>
-    <img src="./dist/assets/img/logo.png" alt="logo" class="header__logo" />
     <header>
-      <nav>
-        <ul class="flex" id="primary-navigation">
+      <img src="./dist/assets/img/logo.png" alt="logo" class="header__logo" />
+      <button aria-controls="primary-navigation">
+        <i id="btn__nav__toggle" class="fas fa-bars" aria-expanded="false"></i>
+        <!-- <i class="fas fa-close"></i> -->
+      </button>
+      <nav data-visible="false" id="primary-navigation">
+        <ul class="flex">
           <li>
             <a href="#" class="nav__btn"
               ><span aria-hidden="true">1.</span>Home</a
@@ -50,6 +59,16 @@
       <div class="container">
         <img src="./dist/assets/img/1.jpg" alt="home" class="carousel__img" />
       </div>
+    </section>
+    <section>
+      <p>
+        <img
+          src="./dist/assets/img/2.jpg"
+          alt="home"
+          style="width: 200px"
+        />Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio,
+        laboriosam!
+      </p>
     </section>
   </body>
 </html>

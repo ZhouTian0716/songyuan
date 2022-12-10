@@ -1,15 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   border: 0;
   outline: 0;
   list-style: none;
   text-decoration: none;
-  box-sizing: border-box;
 }
 
-header {
-  color: #2348ec;
+img {
+  display: block;
+}
+
+body {
+  font-family: "Mukta", sans-serif;
+}
+
+header button {
+  display: none;
 }
 header nav {
   padding: 10px;
@@ -19,10 +28,19 @@ header nav {
   align-items: center;
   justify-content: flex-end;
   font-weight: 700;
-  background-color: red;
+  background-color: hsla(0deg, 0%, 0%, 0.1);
+  backdrop-filter: blur(5px);
+  transition: all 0.5s ease-in-out;
+}
+header nav ul li a {
+  color: #e7e6cd;
 }
 header nav ul li a > [aria-hidden=true] {
   display: none;
+}
+
+#primary-navigation[data-visible=true] {
+  transform: translateX(10%);
 }
 
 .header__logo {
@@ -32,24 +50,39 @@ header nav ul li a > [aria-hidden=true] {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 5;
 }
 
 @media screen and (max-width: 600px) {
+  header button {
+    display: inline-block;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 5;
+    font-size: 1.5rem;
+    aspect-ratio: 1;
+    background-color: transparent;
+    color: #e7e6cd;
+    cursor: pointer;
+  }
   header nav {
     justify-content: flex-start;
-    background-color: hsla(0deg, 0%, 100%, 0.1);
-    backdrop-filter: blur(1rem);
-    inset: 0 0 0 30%;
+    inset: 0 0 0 5%;
+    transform: translateX(100%);
   }
   header nav ul {
     flex-direction: column;
     justify-content: center;
     padding: min(30vh, 2rem) 2rem;
+    --gap: 2rem;
   }
   header nav ul li a > [aria-hidden=true] {
     display: inline-block;
     margin-inline-end: 0.75rem;
+  }
+  .header__logo {
+    width: 15vw;
   }
 }
 .carousel__img {
@@ -57,11 +90,16 @@ header nav ul li a > [aria-hidden=true] {
   height: 80vh;
 }
 
+@media screen and (max-width: 600px) {
+  .carousel__img {
+    aspect-ratio: 1;
+  }
+}
 .nav__btn {
-  transition: all 1s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .nav__btn:hover {
-  color: red;
+  color: #e7e6cd;
 }
 
 .flex {

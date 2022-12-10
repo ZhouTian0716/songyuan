@@ -1,6 +1,8 @@
 @use "./variables" as *;
 header {
-  color: $color-one;
+  button {
+    display: none;
+  }
   nav {
     padding: 10px;
     width: 100%;
@@ -9,9 +11,15 @@ header {
     align-items: center;
     justify-content: flex-end;
     font-weight: 700;
-    background-color: red;
+    background-color: hsl(0 0% 0% / 0.1);
+    backdrop-filter: blur(5px);
+    transition: all 0.5s ease-in-out;
     ul {
       & li {
+        a {
+          color: $color-four;
+        }
+
         a > [aria-hidden="true"] {
           display: none;
         }
@@ -20,6 +28,11 @@ header {
   }
 }
 
+#primary-navigation[data-visible="true"]{
+  transform: translateX(10%);
+}
+
+
 .header__logo {
   width: 90px;
   aspect-ratio: 1;
@@ -27,20 +40,39 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 5;
 }
+
 
 @media screen and (max-width: 600px) {
   header {
+    button {
+      display: inline-block;
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 5;
+      font-size: 1.5rem;
+      aspect-ratio: 1;
+      background-color: transparent;
+
+      color: $color-four;
+
+      cursor: pointer;
+    }
+
     nav {
       justify-content: flex-start;
-      background-color: hsl(0 0% 100% / 0.1);
-      backdrop-filter: blur(1rem);
-      inset: 0 0 0 30%;
+      inset: 0 0 0 5%;
+      transform: translateX(100%);
       ul {
         flex-direction: column;
         justify-content: center;
         padding: min(30vh, 2rem) 2rem;
+        // check in utility class: flex
+        // gap: var(--gap, 1rem);
+        --gap: 2rem;
+
         & li {
           a > [aria-hidden="true"] {
             display: inline-block;
@@ -50,4 +82,10 @@ header {
       }
     }
   }
+
+  .header__logo {
+    width: 15vw;
+  }
+
+  
 }

@@ -1,4 +1,12 @@
-.carousel__img{
-    width:100vw;
-    height:80vh;
+.carousel__img {
+  width: 100vw;
+  height: 80vh;
+}
+
+@media screen and (max-width: 600px) {
+  .carousel__img {
+    // width: 100vw;
+    // height: 100vh;
+    aspect-ratio: 1;
+  }
 }
