@@ -25,7 +25,7 @@ const updateCurrent = (currentIndex) => {
 };
 
 for (let i = 0; i < slideLength; i++) {
-  let slideDot = document.createElement("div");
+  let slideDot = document.createElement("span");
   slideDot.setAttribute("class", "carousel-dot");
   carouselDots.append(slideDot);
   if (i < 1) {

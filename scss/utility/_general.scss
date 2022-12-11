@@ -7,3 +7,12 @@
   display: grid;
   gap: var(--gap, 1rem);
 }
+
+body {
+  display:flex;
+  height: 100vh;
+  flex-direction: column;
+  background-color: aliceblue;
+  background-image: linear-gradient(to bottom, steelblue, #fff);
+  background-repeat: no-repeat;
+}
