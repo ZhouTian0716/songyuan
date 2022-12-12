@@ -4,17 +4,15 @@ const slideLength = document.querySelector("#slides").children.length;
 let activeSlide = slides.querySelector("[data-active]");
 const carouselDots = document.querySelector("#carousel-dots");
 
-const toggleBtn=document.querySelector("#toggle");
+const toggleBtn = document.querySelector("#toggle");
 
 let sliderInterval;
 
 let currentIndex = 0;
 
 const updateCurrent = (currentIndex) => {
-  // console.log(currentIndex);
   const activeDot = carouselDots.querySelector("[data-active]");
-  // console.log(activeDot);
-  // console.log(currentIndex);
+
   const activeSlide = slides.querySelector("[data-active]");
 
   delete activeSlide.dataset.active;
@@ -50,7 +48,7 @@ buttons.forEach((button) => {
 });
 
 const autoSlide = () => {
-  sliderInterval=setInterval(() => {
+  sliderInterval = setInterval(() => {
     // step 1:lookfor current active index
     activeSlide = slides.querySelector("[data-active]");
     currentIndex = [...slides.children].indexOf(activeSlide);
@@ -61,9 +59,9 @@ const autoSlide = () => {
     if (currentIndex >= slides.children.length) currentIndex = 0;
     // step 2:update current active index
     updateCurrent(currentIndex);
-  }, 3000);
+  }, 5000);
 };
 
 document.addEventListener("load", autoSlide());
 
-toggleBtn.addEventListener("click", () =>clearInterval(sliderInterval))
+toggleBtn.addEventListener("click", () => clearInterval(sliderInterval));
