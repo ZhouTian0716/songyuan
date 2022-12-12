@@ -1,3 +1,4 @@
+@use "../sections/variables" as *;
 .flex {
   display: flex;
   gap: var(--gap, 1rem);
@@ -9,10 +10,12 @@
 }
 
 body {
-  display:flex;
-  height: 100vh;
-  flex-direction: column;
-  background-color: aliceblue;
-  background-image: linear-gradient(to bottom, steelblue, #fff);
-  background-repeat: no-repeat;
+  // display:flex;
+  // flex-direction: column;
+  min-height: 100vh;
+  font-family: $font-one sans-serif;
+
+  // background-color: aliceblue;
+  // background-image: linear-gradient(to bottom, steelblue, #fff);
+  // background-repeat: no-repeat;
 }

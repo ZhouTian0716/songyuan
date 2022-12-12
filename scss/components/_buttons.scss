@@ -5,3 +5,19 @@
     color: $color-four;
   }
 }
+
+
+.btn__second {
+ 
+  font-family: $font-two, sans-serif;
+  padding:10px 15px;
+  border-radius:5px;
+  background-color:$color-five;
+  cursor: pointer;
+
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background-color: $color-four;
+  }
+}
+

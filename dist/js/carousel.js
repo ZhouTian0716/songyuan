@@ -64,4 +64,4 @@ const autoSlide = () => {
 
 document.addEventListener("load", autoSlide());
 
-toggleBtn.addEventListener("click", () => clearInterval(sliderInterval));
+// toggleBtn.addEventListener("click", () => clearInterval(sliderInterval));

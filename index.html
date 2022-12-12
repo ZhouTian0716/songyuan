@@ -19,7 +19,6 @@
       <img src="./dist/assets/img/logo.png" alt="logo" class="header__logo" />
       <button aria-controls="primary-navigation">
         <i id="btn__nav__toggle" class="fas fa-bars" aria-expanded="false"></i>
-        <!-- <i class="fas fa-close"></i> -->
       </button>
       <nav data-visible="false" id="primary-navigation">
         <ul class="flex">
@@ -29,35 +28,35 @@
             >
           </li>
           <li>
-            <a href="#About" class="nav__btn"
+            <a href="#about" class="nav__btn"
               ><span aria-hidden="true">2.</span>About Us</a
             >
           </li>
           <li>
-            <a href="#Gallery" class="nav__btn"
+            <a href="#gallery" class="nav__btn"
               ><span aria-hidden="true">3.</span>Gallery</a
             >
           </li>
           <li>
-            <a href="#News" class="nav__btn"
+            <a href="#news" class="nav__btn"
               ><span aria-hidden="true">4.</span>News</a
             >
           </li>
           <li>
-            <a href="#Location" class="nav__btn"
+            <a href="#location" class="nav__btn"
               ><span aria-hidden="true">5.</span>Location</a
             >
           </li>
           <li>
-            <a href="#Contact" class="nav__btn"
+            <a href="#contact" class="nav__btn"
               ><span aria-hidden="true">6.</span>Contact</a
             >
           </li>
         </ul>
       </nav>
     </header>
-    
-    <section class="landing">
+
+    <section class="landing" id="home">
       <div class="carousel" data-carousel>
         <button class="carousel-btn prev" data-carousel-button="prev">
           &#8656;
@@ -86,11 +85,60 @@
           </li>
         </ul>
 
-        
+        <!-- javascript inject dots -->
+        <div class="flex" id="carousel-dots"></div>
       </div>
-      <!-- javascript inject dots -->
-      <div class="flex" id="carousel-dots"></div>
     </section>
     <!-- <button id="toggle">stop</button> -->
+    <section class="about__us" id="about">
+      <h2>Song Yuan Kindergarten</h2>
+      <h2>(0-6 years)</h2>
+      <h2>The Shine Advantange</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non dolore
+        nulla explicabo consequuntur tempore dolor enim in nemo dicta nam, est
+        quia nostrum ullam aliquam facere, vitae ipsa? Impedit sequi veniam, in
+        dignissimos quo mollitia natus reprehenderit corrupti est excepturi,
+        vitae totam qui. Vero assumenda officiis facere ex consectetur dolorem.
+      </p>
+      <button class="btn__second">Learn more</button>
+    </section>
+    <section>
+      <div>
+        <img src="./dist/assets/img/smartstart-icon.png" alt="" />
+        <h3>Smart Start</h3>
+        <div class="hover__show">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+            quas accusamus officiis illum iusto alias!
+          </p>
+          <a href="">Learn more</a>
+        </div>
+      </div>
+      <div>
+        <img src="./dist/assets/img/smartstart-icon.png" alt="" />
+        <h3>Smart Start</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+          quas accusamus officiis illum iusto alias!
+        </p>
+      </div>
+      <div>
+        <img src="./dist/assets/img/smartstart-icon.png" alt="" />
+        <h3>Smart Start</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+          quas accusamus officiis illum iusto alias!
+        </p>
+      </div>
+      <div>
+        <img src="./dist/assets/img/smartstart-icon.png" alt="" />
+        <h3>Smart Start</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+          quas accusamus officiis illum iusto alias!
+        </p>
+      </div>
+    </section>
   </body>
 </html>

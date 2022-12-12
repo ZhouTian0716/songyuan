@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -101,17 +102,17 @@ header nav ul li a > [aria-hidden=true] {
 .landing {
   width: 100%;
   aspect-ratio: 2;
-  position: relative;
 }
 
 .carousel {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .slide {
   position: absolute;
-  inset: 0;
+  inset: 0 0;
   opacity: 0;
   transition: all 0.3s ease-in-out;
 }
@@ -131,10 +132,10 @@ header nav ul li a > [aria-hidden=true] {
   position: absolute;
   top: 50%;
   z-index: 2;
-  font-size: 2rem;
   transform: translateY(-50%);
   background: none;
   cursor: pointer;
+  font-size: 2rem;
   padding: 0 0.5rem;
   border-radius: 0.25rem;
   color: rgba(255, 255, 255, 0.6);
@@ -155,12 +156,15 @@ header nav ul li a > [aria-hidden=true] {
 
 #carousel-dots {
   width: fit-content;
-  position: relative;
+  position: absolute;
   transform: translateX(-50%);
   left: 50%;
-  bottom: 2rem;
+  bottom: 1.5rem;
   --gap: 10px;
-  z-index: 2;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
 }
 
 .carousel-dot {
@@ -176,11 +180,65 @@ header nav ul li a > [aria-hidden=true] {
   transform: scale(1.5);
 }
 
+@media screen and (max-width: 600px) {
+  .carousel-btn {
+    font-size: 1rem;
+    padding: 0 0.25rem;
+    border-radius: 0.1rem;
+  }
+  #carousel-dots {
+    --gap: 6px;
+    padding: 5px 10px;
+    bottom: 0.75rem;
+  }
+  .carousel-dot {
+    width: 6px;
+  }
+}
+.about__us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 1rem 3rem 1rem;
+  background-image: url("../../dist/assets/img/bluesky.png");
+  background-position: center;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+.about__us h2 {
+  font-family: "Unbounded", sans-serif;
+  padding-top: 3rem;
+  color: #fff;
+}
+.about__us p {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media screen and (max-width: 600px) {
+  .about__us h2 {
+    font-size: 1rem;
+  }
+}
 .nav__btn {
   transition: all 0.3s ease-in-out;
 }
 .nav__btn:hover {
   color: #e7e6cd;
+}
+
+.btn__second {
+  font-family: "Unbounded", sans-serif;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: rgb(241, 241, 13);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.btn__second:hover {
+  background-color: #e7e6cd;
 }
 
 .flex {
@@ -194,12 +252,8 @@ header nav ul li a > [aria-hidden=true] {
 }
 
 body {
-  display: flex;
-  height: 100vh;
-  flex-direction: column;
-  background-color: aliceblue;
-  background-image: linear-gradient(to bottom, steelblue, #fff);
-  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: "Mukta" sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */
